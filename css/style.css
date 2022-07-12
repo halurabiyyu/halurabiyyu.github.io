@@ -135,11 +135,15 @@ input[type=search]{
     cursor: pointer;
 }
 
-.btn-submit:hover .searchBtn:hover{
+.btn-submit:hover{
     background: #D79771;
     color: white;
 }
 
+.searchBtn:hover{
+    background: #D79771;
+    color: white;
+}
 input[type=title],input[type=author], input[type=year], input[type=search] .btn-submit:focus {
     outline: none;
 }
@@ -225,6 +229,5 @@ input[type=title],input[type=author], input[type=year], input[type=search] .btn-
 
     .search{
         width: 100%;
-        
     }
 }
