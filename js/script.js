@@ -1,16 +1,9 @@
-//menambahkan  sebuah variabel berisi array yang akan menampung beberapa object. Object ini berisikan data-data Todo user. 
-const books = [];
-
-//menambahkan sebuah variabel yang bertujuan mendefinisikan custom event  dengan nama render-todo
+ const books = [];
 const RENDER_EVENT = 'render-book';
 
 const SAVED_EVENT = 'saved-book';
 const STORAGE_KEY = 'BOOK_APPS';
 
-
-
-
-//Kode di bawah adalah sebuah listener yang akan menjalankan kode yang ada didalamnya ketika event DOMContentLoaded dibangkitkan alias ketika semua elemen HTML sudah dimuat menjadi DOM dengan baik.
 document.addEventListener('DOMContentLoaded', function () {
     const submitForm = document.getElementById('form');
     submitForm.addEventListener('submit', function (event) {
@@ -22,11 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-//membuat fungsi untuk membuat todo
 function addBook() {
-    //kode di bawah berfungsi untuk mengambil elemen pada html
     const textBook = document.getElementById('title').value;
-    //dalam kasus ini kita menangkap element input dengan id title dan memanggil properti value untuk mendapatkan nilai yang diinputkan oleh user
     const authorBook = document.getElementById('author').value;
     const timestamp = document.getElementById('year').value;
     const hiddenMessage = 'Penulis ' + authorBook + 'Tahun ' + timestamp;
