@@ -58,7 +58,7 @@ return null;
 }
 
 function removeTaskFromCompleted(bookId) {
-  const bookTarget = findTodoIndex(bookId);
+  const bookTarget = findBookIndex(bookId);
  
   if (bookTarget === -1) return;
  
@@ -69,7 +69,7 @@ function removeTaskFromCompleted(bookId) {
  
  
 function undoTaskFromCompleted(bookId) {
-  const bookTarget = findTodo(bookId);
+  const bookTarget = findBook(bookId);
  
   if (bookTarget == null) return;
  
@@ -78,7 +78,7 @@ function undoTaskFromCompleted(bookId) {
   saveData();
 }
 
-function findTodoIndex(bookId) {
+function findBookIndex(bookId) {
   for (const index in books) {
     if (books[index].id === bookId) {
       return index;
