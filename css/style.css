@@ -225,5 +225,6 @@ input[type=title],input[type=author], input[type=year], input[type=search] .btn-
 
     .search{
         width: 100%;
+        
     }
 }
