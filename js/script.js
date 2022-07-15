@@ -156,7 +156,6 @@ function makeBook(bookObject) {
         checkButton.addEventListener('click', function () {
           addTaskToCompleted(bookObject.id);
         });
-
         const trashButton = document.createElement('button');
         trashButton.classList.add('trash-button');
      
@@ -164,12 +163,40 @@ function makeBook(bookObject) {
           removeTaskFromCompleted(bookObject.id);
         });
         
-        container.append(checkButton, trashButton);
+        container.append(checkButton,  trashButton);
       }
 
     return container;
   }
 
+  /**
+  function editPage(bookId){
+    div('list-item').addEventListener('click', (event) => {
+      if(event.target.tagName === 'BUTTON') {
+        const button = event.target;
+        const p = button.parentNode;
+        const div = p.parentNode;
+        if(button.textContent === 'edit') {
+          const page = p.firstElementChild;
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.value = page.textContent;
+          p.insertBefore(input, page);
+          p.removeChild(page);
+          button.textContent = 'save';
+        } else if(button.textContent === 'save') {
+          const input = p.firstElementChild;
+          const page = document.createElement('page');
+          page.textContent = input.value;
+          p.insertBefore(page, input);
+          p.removeChild(input);
+          button.textContent = 'edit';
+  }
+
+  }
+  });
+}
+**/
   function eraseText(){
     document.getElementById("title").value = "";
     document.getElementById("page").value = "";

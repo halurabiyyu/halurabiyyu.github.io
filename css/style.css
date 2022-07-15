@@ -217,10 +217,26 @@ input[type=search], input[type=clear] {
     background-size: contain;
 }
 
-.trash-button {
+.edit-button{
     width: 40px;
     height: 40px;
 
+    background: url('../assets/edit-outline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+    float: right;
+}
+
+.edit-button:hover {
+    background: url('../assets/edit-fill.svg');
+    background-size: contain;
+}
+
+.trash-button {
+    width: 40px;
+    height: 40px;
     background: url('../assets/trash-outline.svg');
     background-size: contain;
     margin-left: 16px;
