@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    font-family: Raleway, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -56,7 +57,7 @@ header {
     padding: 16px;
     background: #ffffff;
     flex-direction: column;
-    height: 300px;
+    height: 400px;
     border-radius: 16px;
 }
 
@@ -67,6 +68,7 @@ header {
 
 .form-group label {
     margin-bottom: 4px;
+    color: black;
     font-size: 18px;
     font-weight: lighter;
 }
@@ -75,7 +77,7 @@ header {
     box-shadow: 0 5px 10px rgba(0, 51, 255, 0.05), 0 15px 40px rgba(166, 173, 201, .2);
 }
 
-input[type=title],input[type=author], input[type=year]{
+input[type=title], input[type=page],input[type=author], input[type=year]{
     font-family: Raleway, sans-serif;
     background: #FFEBC9;
     border: 2px solid #D79771;
@@ -99,11 +101,42 @@ input[type=search]{
     font-size: 24px;
 }
 
+.search{
+    width: 1024px;
+    border-radius: 8px;
+    margin-top: 26px;
+    flex-grow: 1;
+}
+
 .search-title{
     margin-left: 14px;
     margin-bottom: 4px;
     font-size: 18px;
     font-weight: lighter;
+}
+
+.left{
+    float: left;
+    display: block;
+  }
+.right{
+    float: right;
+    display: block;
+}
+
+.btn-clear{
+    width: 90px;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 2px 20px;
+    border: 2px solid #D79771;
+    background: #F8F9FA;
+    color: black;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    float: right;
 }
 
 .btn-submit{
@@ -116,9 +149,12 @@ input[type=search]{
     color: black;
     font-size: 20px;
     margin-top: 5px;
-    align-self: flex-end;
+    margin-right: 5px;
     cursor: pointer;
+    float: right;
 }
+
+
 
 .searchBtn{
     width: fit-content;
@@ -126,7 +162,7 @@ input[type=search]{
     border-radius: 16px;
     padding: 2px 20px;
     border: 2px solid #D79771;
-    background: #F8F9FA;
+    background: #ffffff;
     color: black;
     font-size: 20px;
     margin-top: 5px;
@@ -140,14 +176,22 @@ input[type=search]{
     color: white;
 }
 
+.btn-clear:hover{
+    background: #D79771;
+    color: white;
+}
+
 .searchBtn:hover{
     background: #D79771;
     color: white;
 }
-input[type=title],input[type=author], input[type=year], input[type=search] .btn-submit:focus {
+input[type=title], input[type=page], input[type=author], input[type=year] {
     outline: none;
 }
 
+input[type=search], input[type=clear]{
+    outline: none;
+}
 
 .text-center {
     text-align: center;

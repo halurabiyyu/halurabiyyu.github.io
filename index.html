@@ -16,7 +16,7 @@
 
 
 
-    
+
 <div class="wrapper">
     <div class="container bg-white shadow" id="add-book">
         <h2 class="container-header text-center">Tambah Buku</h2>
@@ -26,6 +26,10 @@
                 <input type="title" id="title" name="title" placeholder="Judul Buku" required>
             </div>
             <div class="form-group form-title">
+                <label for="title">Halaman</label>
+                <input type="page" id="page" name="page" placeholder="Halaman Terakhir dibaca" required>
+            </div>
+            <div class="form-group form-title">
                 <label for="title">Penulis</label>
                 <input type="author" id="author" name="author" placeholder="Penulis Buku" required>
             </div>
@@ -33,7 +37,10 @@
                 <label for="year">Tahun</label>
                 <input type="year" id="year" name="year" placeholder="Tahun Terbit" required>
             </div>
-            <input type="submit" value="Submit" name="Submit" class="btn-submit">
+            <div class="button">
+                <input type="clear" value="clear" name="clear" class="btn-clear" onclick="javascript:eraseText();">
+                <input type="submit" value="Submit" name="Submit" class="btn-submit">
+            </div>
         </form>
     </div>
 

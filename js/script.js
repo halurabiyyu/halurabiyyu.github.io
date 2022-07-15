@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function addBook() {
     const textBook = document.getElementById('title').value;
+    const pageBook = document.getElementById('page').value;
     const authorBook = document.getElementById('author').value;
     const timestamp = document.getElementById('year').value;
-    const hiddenMessage = 'Penulis ' + authorBook + 'Tahun ' + timestamp;
+    const hiddenMessage = 'Halaman '+ pageBook +'Penulis ' + authorBook + 'Tahun ' + timestamp;
     const generatedID = generateId();
-    const bookObject = generateBookObject(generatedID, textBook, authorBook, timestamp, false);
+    const bookObject = generateBookObject(generatedID, textBook, pageBook, authorBook, timestamp, false);
     books.push(bookObject);
    
     document.dispatchEvent(new Event(RENDER_EVENT));
@@ -98,10 +99,11 @@ function generateId() {
     return +new Date();
 }
 
-function generateBookObject(id, title, author, year, isCompleted) {
+function generateBookObject(id, title, page, author, year, isCompleted) {
     return {
       id,
       title,
+      page,
       author,
       year,
       isCompleted
@@ -111,6 +113,9 @@ function generateBookObject(id, title, author, year, isCompleted) {
 function makeBook(bookObject) {
     const textTitle = document.createElement('h2');
     textTitle.innerText = bookObject.title;
+
+    const textPage = document.createElement('p');
+    textPage.innerText = bookObject.page;
     
     const textAuthor = document.createElement('p');
     textAuthor.innerText = bookObject.author;
@@ -120,7 +125,7 @@ function makeBook(bookObject) {
    
     const textContainer = document.createElement('div');
     textContainer.classList.add('inner');
-    textContainer.append(textTitle, 'Penulis', textAuthor, 'Tahun', textYear);
+    textContainer.append(textTitle, 'Halaman', textPage, 'Penulis', textAuthor, 'Tahun', textYear);
     
 
     const container = document.createElement('div');
@@ -163,6 +168,13 @@ function makeBook(bookObject) {
       }
 
     return container;
+  }
+
+  function eraseText(){
+    document.getElementById("title").value = "";
+    document.getElementById("page").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("year").value = "";
   }
 
   function searchBook(){
