@@ -189,7 +189,7 @@ input[type=title], input[type=page], input[type=author], input[type=year] {
     outline: none;
 }
 
-input[type=search], input[type=clear]{
+input[type=search], input[type=clear] {
     outline: none;
 }
 
