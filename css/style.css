@@ -18,6 +18,12 @@ header {
     color: white;
 }
 
+img {
+    float: left;
+    margin-top: 17px;
+    margin-right: 5px;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
