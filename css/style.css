@@ -35,7 +35,10 @@ img {
     border-radius: 8px;
     margin: 16px;
     background: #ffffff;
-    padding: 16px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 20px;
     flex-grow: 1;
     height: fit-content;
 }
@@ -58,13 +61,15 @@ img {
     margin-top: 0px;
 }
 
-.form {
+.div-form {
     display: flex;
-    padding: 16px;
-    background: #ffffff;
     flex-direction: column;
-    height: 400px;
-    border-radius: 16px;
+}
+.div-form label {
+    margin-bottom: 4px;
+    color: black;
+    font-size: 18px;
+    font-weight: lighter;
 }
 
 .form-group {
@@ -130,37 +135,26 @@ input[type=search]{
     display: block;
 }
 
-.btn-clear{
-    width: 90px;
-    font-family: Raleway, sans-serif;
-    border-radius: 16px;
-    padding: 2px 20px;
-    border: 2px solid #D79771;
-    background: #F8F9FA;
-    color: black;
-    font-size: 20px;
+.button-form{
     margin-top: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-    float: right;
 }
 
-.btn-submit{
+.btn-submit, .btn-clear{
     width: fit-content;
     font-family: Raleway, sans-serif;
     border-radius: 16px;
     padding: 2px 20px;
     border: 2px solid #D79771;
-    background: #F8F9FA;
+    background: #ffffff;
     color: black;
     font-size: 20px;
-    margin-top: 5px;
-    margin-right: 5px;
     cursor: pointer;
-    float: right;
+    float : right;
 }
 
-
+.btn-clear{
+    margin-right: 5px;
+}
 
 .searchBtn{
     width: fit-content;
@@ -177,20 +171,14 @@ input[type=search]{
     cursor: pointer;
 }
 
-.btn-submit:hover{
+
+
+.btn-submit:hover, .btn-clear:hover, .searchBtn:hover{
     background: #D79771;
     color: white;
 }
 
-.btn-clear:hover{
-    background: #D79771;
-    color: white;
-}
 
-.searchBtn:hover{
-    background: #D79771;
-    color: white;
-}
 input[type=title], input[type=page], input[type=author], input[type=year] {
     outline: none;
 }
