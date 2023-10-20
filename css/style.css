@@ -195,15 +195,39 @@ input[type=search], input[type=clear] {
     margin: auto 0;
 }
 
-.check-button {
+.check-button, .undo-button {
     width: 40px;
     height: 40px;
-
-    background: url('../assets/check-outline.svg');
     background-size: contain;
     margin-left: auto;
     cursor: pointer;
     border: none;
+}
+.trash-button{
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+.undo-button{
+    width: 45px;
+    height: 45px;
+    padding: 0;
+}
+
+.check-button{
+    background: url('../assets/check-outline.svg');
+}
+.edit-button{
+    background: url('../assets/edit-outline.svg');
+}
+.trash-button{
+    background: url('../assets/trash-outline.svg');
+}
+.undo-button{
+    background: url('../assets/undo-ouline.svg');
 }
 
 .check-button:hover {
@@ -211,31 +235,9 @@ input[type=search], input[type=clear] {
     background-size: contain;
 }
 
-.edit-button{
-    width: 40px;
-    height: 40px;
-
-    background: url('../assets/edit-outline.svg');
-    background-size: contain;
-    margin-left: auto;
-    cursor: pointer;
-    border: none;
-    float: right;
-}
-
 .edit-button:hover {
     background: url('../assets/edit-fill.svg');
     background-size: contain;
-}
-
-.trash-button {
-    width: 40px;
-    height: 40px;
-    background: url('../assets/trash-outline.svg');
-    background-size: contain;
-    margin-left: 16px;
-    cursor: pointer;
-    border: none;
 }
 
 .trash-button:hover {
@@ -243,19 +245,8 @@ input[type=search], input[type=clear] {
     background-size: contain;
 }
 
-.undo-button {
-    width: 40px;
-    height: 40px;
-
-    background: url('../assets/undo-ouline.svg');
-    background-size: contain;
-    margin-left: auto;
-    cursor: pointer;
-    border: none;
-}
-
 .undo-button:hover {
-    background: url('../assets/undo-ouline.svg');
+    background: url('../assets/undo-fill.svg');
     background-size: contain;
 }
 
