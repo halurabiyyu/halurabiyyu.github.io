@@ -13,9 +13,15 @@ html, body {
 }
 
 header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     background: #753422;
     padding: 16px;
     color: white;
+}
+.head{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 img {
