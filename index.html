@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="home">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +10,22 @@
 </head>
 <body>
     <header>
-        <img src="assets/logo4.svg" width="50px">
-        <h1 class="head">BOOKSHELF</h1>
+        <div class="header" onscroll="javascript: scrollFunction();">
+                <img class="head-img" src="assets/logo4.svg" width="50px">
+                <h1 class="head">BOOKSHELF</h1>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#search-book">Search</a></li>
+                        <li><a href="#add-book">Add</a></li>
+                        <li><a href="#home">Home</a></li>
+                    </ul>
+                </nav>
+        </div>
     </header>
+
 <div class="wrapper">
     <div class="container bg-white shadow" id="add-book">
-        <h2 class="container-header text-center">Tambah Buku</h2>
+        <h2 class="container-header text-center" id="add-book">Tambah Buku</h2>
         <form class="form" action="#" id="form">
             <div class="div-form">
                 <label for="title">Judul</label>
@@ -39,7 +49,7 @@
             </div>
         </form>
     </div>
-    <div class="container bg-white shadow">
+    <div class="container bg-white shadow" id="search-book">
         <h2 class="container-header text-center">Cari Buku</h2>
         <form action="#" id="searchBook">
             <div class="form-group form-title">
@@ -49,11 +59,11 @@
             </div>
         </form>
     </div>  
-    <div class="container">
+    <div class="container" id="unreading">
         <h2 class="container-header">Belum dibaca</h2>
         <div class="list-item" id="books"></div>
     </div>
-    <div class="container">
+    <div class="container" id="readed">
         <h2 class="container-header">Sudah dibaca</h2>
         <div class="list-item" id="completed-books"></div>
     </div>

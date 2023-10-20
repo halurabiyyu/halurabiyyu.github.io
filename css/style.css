@@ -12,22 +12,61 @@ html, body {
     box-sizing: border-box;
 }
 
-header {
+.header {
+    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     background: #753422;
-    padding: 16px;
+    padding: 16px 10px;
     color: white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position: fixed;
+    width: 100%;
+    transition: 0.4s;
+    z-index: 99
 }
+
 .head{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    flex: auto;
+    transition: 0.4s;
 }
 
 img {
     float: left;
     margin-top: 17px;
     margin-right: 5px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #753422;
+}
+
+li{
+    display: inline;
+    float: right;
+}
+  
+a {
+    color: white;
+    display: block;
+    padding: 8px;
+    background: #753422;
+}
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+li a:hover {
+    background-color: #D79771;
 }
 
 .wrapper {
@@ -39,7 +78,10 @@ img {
 .wrapper .container{
     width: 1024px;
     border-radius: 8px;
-    margin: 16px;
+    margin-top: 150px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
     background: #ffffff;
     padding-top: 16px;
     padding-left: 16px;
@@ -48,6 +90,11 @@ img {
     flex-grow: 1;
     height: fit-content;
 }
+
+#search-book, #unreading, #readed{
+    margin-top: 16px;
+}
+
 
 
 .item {
@@ -96,7 +143,7 @@ img {
 
 input[type=title], input[type=page],input[type=author], input[type=year]{
     background: #FFEBC9;
-    border: 2px solid #D79771;
+    border: 2px solid #D97717;
     border-radius: 8px;
     padding: 16px;
     box-sizing: border-box;
