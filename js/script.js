@@ -1,3 +1,25 @@
+ // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAYZffPv5UivBak7Oy8aUwZFvmz1iKpL2c",
+  authDomain: "bookself-h.firebaseapp.com",
+  projectId: "bookself-h",
+  storageBucket: "bookself-h.appspot.com",
+  messagingSenderId: "494885205027",
+  appId: "1:494885205027:web:2591a58f328327b7cfed96",
+  measurementId: "G-ZCSQYYWEW6"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+ 
  const books = [];
 const RENDER_EVENT = 'render-book';
 
